@@ -32,19 +32,19 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 
 
 
-// function flatten(arr) {
-// if (arr.length === 0) {
-//   return [];
-// } else {
-//   const first = arr[0];
-//   const rest = arr.slice(1);
-//   if (Array.isArray(first)) {
-//     return flatten(first).concat(flatten(rest))
-//   }else {
-//     return [first].concat(flatten(rest))
-//   }
-// }
-// }
+function flatten(arr) {
+if (arr.length === 0) {
+  return [];
+} else {
+  const first = arr[0];
+  const rest = arr.slice(1);
+  if (Array.isArray(first)) {
+    return flatten(first).concat(flatten(rest))
+  }else {
+    return [first].concat(flatten(rest))
+  }
+}
+}
 
 console.log(flatten([1, 2])); // [1, 2]
 console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
